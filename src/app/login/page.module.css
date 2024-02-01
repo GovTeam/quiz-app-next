@@ -1,0 +1,64 @@
+.container {
+  background-color: #e6f3ff;
+  padding: 5% 10% 10% 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.col1 {
+  width: 50%;
+  padding: 0 10% 10% 10%;
+}
+.col2 {
+  width: 50%;
+}
+.img1 {
+  width: 100%;
+  height: auto;
+}
+.card {
+  background-color: white;
+  border-radius: 25px;
+  margin: 8% 5% 8% 5%;
+  padding: 6% 2% 5% 5%;
+}
+.head1 {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 0 6% 0;
+}
+.input {
+  font-size: 20px;
+  color: #7c838a;
+  margin: 2% 0 0 0;
+}
+.inpEmail {
+  background-color: #d8e4eede;
+  color: #7c838a;
+  width: 95%;
+  border: none;
+  font-size: 20px;
+  padding: 12px 6px 12px 12px;
+  margin: 10px 2px 25px 0px;
+  border-radius: 10px;
+}
+.loginBtn {
+  background-color: #f9ed32;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
+  padding: 12px 6rem 11px 6rem;
+  margin: 20px;
+  cursor: pointer;
+}
+.txt {
+  font-size: 18px;
+  color: #7c838a;
+  text-align: center;
+}
+.txt2 {
+  color: #dfd007;
+  cursor: pointer;
+  text-decoration: none;
+}
