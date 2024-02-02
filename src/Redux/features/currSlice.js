@@ -26,7 +26,13 @@ const initialQuestions = [
       order: '3',
       type: 'fill',
       question: 'Fill in the blanks',
-      
+      options:[
+        '12 + 24',
+        '12 - 24',
+        '12 * 24',
+        '12 / 24'
+      ]
+
   }
 ]
 
