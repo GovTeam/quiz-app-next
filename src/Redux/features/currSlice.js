@@ -57,13 +57,13 @@ export const currSlice = createSlice({
     decrement: (state) => {
       state.currentQuestion -= 1
     },
-    incrementByAmount: (state, action) => {
-      state.currentQuestion += action.payload
+    gotoQue: (state, action) => {
+      state.currentQuestion = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = currSlice.actions
+export const { increment, decrement, gotoQue } = currSlice.actions
 
 export default currSlice.reducer
