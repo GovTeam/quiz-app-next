@@ -28,9 +28,9 @@ const initialQuestions = [
       question: 'Fill in the blanks',
       options:[
         '12 + 24',
-        '12 - 24',
+        '24 - 12',
         '12 * 24',
-        '12 / 24'
+        '24 / 12'
       ]
 
   }
