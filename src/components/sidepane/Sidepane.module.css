@@ -1,0 +1,42 @@
+.container {
+  width: 20%;
+  position: fixed;
+  right: 0;
+  top: 4.5rem;
+  height: 90vh;
+  background-color: white;
+  border: solid 2px #81c3ff;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.head1 {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+.head2 {
+  font-size: 14px;
+  color: rgb(107, 107, 107);
+  font-weight: 400;
+  text-align: left;
+  margin: 1rem 0 0.5rem 0;
+}
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 5%;
+}
+.btn1 {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #81c3ff;
+  border: solid 1px #81c3ff;
+  width: 15%;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
