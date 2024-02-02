@@ -41,11 +41,14 @@
   width: 100%;
   cursor: pointer;
 }
-.answered{
-  background-color: #0fd132;
-  border: none;
-}
+
 .current{
   background-color: #fcba03;
+  border: none;
+  border: solid 2px #fcba03;
+}
+
+.answered{
+  background-color: #0fd132;
   border: none;
 }

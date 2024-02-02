@@ -14,8 +14,12 @@ export const ansSlice = createSlice({
     },
     reducers: {
       setAnswer: (state, action) => {
-        state.answers[action.payload.index].value = action.payload.value;
+        console.log("IN set ans")
+        console.log(state)
+        console.log(action)
+        console.log(action.payload.index)
         state.answers[action.payload.index].answered = true;
+        state.answers[action.payload.index].value = action.payload.value;
       },
     },
   })

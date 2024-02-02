@@ -15,10 +15,10 @@
       "type": "select",
       "question": "Select the smallest number from the following",
       "options": [
-        "1",
-        "2",
-        "3",
-        "4"
+        "20",
+        "10",
+        "50",
+        "100"
       ]
     },
     {
