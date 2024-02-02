@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { UseSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import initialQuestions from './Questions.json'
 
-let initialAns = Array(3).fill({
+let initialAns = Array(initialQuestions.length).fill({
     answered: false,
     value : ''
 })

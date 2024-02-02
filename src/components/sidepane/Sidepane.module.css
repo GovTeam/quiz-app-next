@@ -29,14 +29,23 @@
   width: 100%;
   justify-content: center;
   gap: 5%;
+  margin: 30px 0px;
 }
 .btn1 {
   font-size: 18px;
   font-weight: 600;
   background-color: #81c3ff;
   border: solid 1px #81c3ff;
-  width: 15%;
   height: 40px;
   border-radius: 10px;
+  width: 100%;
   cursor: pointer;
+}
+.answered{
+  background-color: #0fd132;
+  border: none;
+}
+.current{
+  background-color: #fcba03;
+  border: none;
 }

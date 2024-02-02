@@ -1,40 +1,27 @@
 import React from "react";
 import styles from "./Sidepane.module.css";
+import { useAppSelector } from "@/Redux/hooks";
+import Link from "next/link";
 
-function Sidepane() {
+function Sidepane(props) {
+  const questions = useAppSelector((state) => state.questions.allQuestions);
+  const answers = useAppSelector((state) => state.answers.answers);
+  console.log(questions, answers);
   return (
     <div className={styles.container}>
       <div className={styles.head1}>Browse Your questions</div>
 
-      {/* smallest number */}
-      <div className={styles.head2}>Find the Smallest Number</div>
-      <div className={styles.box1}>
-        <button className={styles.btn1}>1</button>
-        <button className={styles.btn1}>2</button>
-        <button className={styles.btn1}>3</button>
-        <button className={styles.btn1}>4</button>
-        <button className={styles.btn1}>5</button>
+      <div className="grid grid-cols-5 gap-4">
+        {questions.map((question, index) => (
+          <Link key={index} href={`/questions/${index}`}>
+          <button className={`${styles.btn1} ${(answers[index].answered? styles.answered:"")} ${(index==props.curr? styles.current:"")}`}>
+            {index + 1}
+          </button>
+          </Link>
+        ))}
       </div>
 
-      {/* Match the column */}
-      <div className={styles.head2}>Match the column</div>
-      <div className={styles.box1}>
-        <button className={styles.btn1}>1</button>
-        <button className={styles.btn1}>2</button>
-        <button className={styles.btn1}>3</button>
-        <button className={styles.btn1}>4</button>
-        <button className={styles.btn1}>5</button>
-      </div>
 
-      {/* Fill in the blanks */}
-      <div className={styles.head2}>Fill in the blanks</div>
-      <div className={styles.box1}>
-        <button className={styles.btn1}>1</button>
-        <button className={styles.btn1}>2</button>
-        <button className={styles.btn1}>3</button>
-        <button className={styles.btn1}>4</button>
-        <button className={styles.btn1}>5</button>
-      </div>
     </div>
   );
 }

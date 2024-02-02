@@ -1,40 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import initialQuestions from './Questions.json'
     // questions attributes:
     // order: the precedence level in which it should be shown
     // type: the type of question, select- select one of options; match-match the columns, fill- fill in the blanks
     // question: The statement
     // Options: Optional field to tell the options for select and match type of questions
 
-const initialQuestions = [
-  {
-      order: '1',
-      type: 'select',
-      question: 'Select the smallest number from the following',
-      options: ['1', '2', '3', '4']
-  },
-  {
-      order: '2',
-      type: 'match',
-      question: 'Match the following',
-      options:{
-        left: ['a', 'b', 'c', 'd'],
-        right: ['1', '2', '3', '4']
-      }
-  },
-  {
-      order: '3',
-      type: 'fill',
-      question: 'Fill in the blanks',
-      options:[
-        '12 + 24',
-        '24 - 12',
-        '12 * 24',
-        '24 / 12'
-      ]
-
-  }
-]
 
 export const currSlice = createSlice({
   name: 'questions',
@@ -56,14 +27,15 @@ export const currSlice = createSlice({
     },
     decrement: (state) => {
       state.currentQuestion -= 1
+      return;
     },
-    gotoQue: (state, action) => {
+    setQuestion: (state, action) => {
       state.currentQuestion = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, gotoQue } = currSlice.actions
+export const { increment, decrement, setQuestion } = currSlice.actions
 
 export default currSlice.reducer
