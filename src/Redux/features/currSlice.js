@@ -1,10 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const initialQuestions = [
+  {
+      order: '1',
+      type: 'select'
+  },
+  {
+      order: '2',
+      type: 'match'
+  },
+  {
+      order: '3',
+      type: 'fill'
+  }
+]
+
 export const currSlice = createSlice({
   name: 'questions',
   initialState: {
     currentQuestion: 0,
-    totalQuestions: 3,
+    allQuestions: initialQuestions,
+    totalQuestions: initialQuestions.length,
   },
   reducers: {
     increment: (state) => {
