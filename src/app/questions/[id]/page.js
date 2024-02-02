@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector, useAppStore } from "@/Redux/hooks";
-import { increment, decrement} from "@/Redux/features/currSlice";   
+import { increment, decrement} from "@/Redux/features/currSlice";  
+import { setAnswer } from "@/Redux/features/ansSlice";
 
 
 function page({params}) {
@@ -15,6 +16,7 @@ function page({params}) {
     // Handle the error scenario when the params.id is not a number or out of limit
   return <div>
     Question {params.id}
+    <button onClick={()=> dispatch(setAnswer({index:questionNumber, value: 'Ans'}))}> Set Answer </button>
     </div>;
 }
 
