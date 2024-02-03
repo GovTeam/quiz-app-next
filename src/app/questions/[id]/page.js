@@ -19,8 +19,8 @@ function page({params}) {
   const handleSubmit = (e) => {}
     const allQuestions = useAppSelector(state => state.questions.allQuestions);
     let question = allQuestions[params.id];
-    const handlePrev = () => {
-      if(params.id == 0) return;
+    const handlePrev = (e) => {
+      if(params.id == 0) e.preventDefault();
       console.log('prev');
     }
     const handleNext = () =>{
