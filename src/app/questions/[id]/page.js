@@ -8,6 +8,7 @@ import styles from "../page.module.css";
 import BottomPane from "@/components/bottomPane/BottomPane";
 import Select from '@/components/QuestionTypes/Select';
 import Match from '@/components/QuestionTypes/Match';
+import FillBlanks from "@/components/QuestionTypes/FillBlanks";
 
 
 function page({params}) {
@@ -38,6 +39,8 @@ function page({params}) {
       {question.type === "select" && <Select question={question} />}
 
       {question.type === "match" && <Match question={question} />}
+      {question.type === "fill" && <FillBlanks question={question} />}
+
     </div>
   </div>
   );
