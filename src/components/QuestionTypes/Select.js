@@ -10,7 +10,6 @@ function Select(props){
     const dispatch = useAppDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(selected);
         dispatch(setAnswer({index: question.order, value: selected}));
     }
     useEffect(() => {

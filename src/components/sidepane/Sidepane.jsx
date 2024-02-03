@@ -6,7 +6,6 @@ import Link from "next/link";
 function Sidepane(props) {
   const questions = useAppSelector((state) => state.questions.allQuestions);
   const answers = useAppSelector((state) => state.answers.answers);
-  console.log(questions, answers);
   return (
     <div className={styles.container}>
       <div className={styles.head1}>Browse Your questions</div>
