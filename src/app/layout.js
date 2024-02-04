@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const verifyToken = () => {
       try {
-        axios.get("@/api/auth/verify-token");
+        axios.get("/api/auth/verify-token");
         setVerified(true);
       } catch (error) {
         setVerified(false);

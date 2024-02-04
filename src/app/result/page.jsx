@@ -23,6 +23,7 @@ function page() {
   const questions = useAppSelector((state) => state.questions.allQuestions);
   const answers = useAppSelector((state) => state.answers.answers);
   const answerKey = useAppSelector((state) => state.answers.answerKey);
+  const status = useAppSelector((state) => state.status.currentStatus);
   const verifyAnswers = () =>{
     console.log('Verifying answers');
     let attempted = 0, correct = 0;
@@ -45,6 +46,7 @@ function page() {
     console.log("questions", questions);
     console.log("answers", answers);
     console.log("answerKey", answerKey);
+    console.log("status", status);
     let obj = verifyAnswers();
     console.log(obj);
     setAttempted(obj.attempted);

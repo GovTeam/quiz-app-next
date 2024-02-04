@@ -17,9 +17,12 @@ const Navbar = () => {
 
   const handleLogout = () => {
     try {
-      axios.get("@/api/auth/logout");
-      router.push("/login");
+      axios.get("/api/auth/logout")
+      .then((res)=>{
+        console.log("response received",res.data);
+      });
       setVerified(false);
+      router.push("/login");
       alert("You were logged out!");
     } catch (err) {
       console.log("Some error occured!");
@@ -30,9 +33,13 @@ const Navbar = () => {
   useEffect(() => {
     const verifyToken = () => {
       try {
-        axios.get("@/api/auth/verify-token");
-        setVerified(true);
-        console.log("fetch successful");
+        axios.get("/api/auth/verify-token")
+        .then((res)=>{
+          console.log("response received",res.data);
+          setVerified(true);
+        }).catch((err)=>{
+          console.log("error",err);
+        });
       } catch (error) {
         setVerified(false);
         router.push("/login");
