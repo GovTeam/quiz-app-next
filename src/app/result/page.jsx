@@ -63,7 +63,8 @@ function page() {
         <Card heading={attempted} description="Attempted" />
         <Card heading={correct} description="Correct" />
       </div>
-      <div className='flex flex-row justify-center py-7'> <button className={styles.saveBtn}> View correct answers </button> </div>
+      <div className='flex flex-row justify-center py-7'> <Link href="/result/correct_answers/0"> <button className={styles.saveBtn}> View correct answers </button></Link> </div>
+      <div className='flex flex-row justify-center py-7'> <Link href="/"> <button className={styles.saveBtn}> Back to Home </button> </Link></div>
     </div>
   );
 }
