@@ -76,7 +76,7 @@ const Navbar = () => {
             alt="Logo"
           />
         </Link>
-        <h2 className={" text-center text-xs lg:text-sm font-light text-gray-400 ml-[4px] py-2 px-3 border-gray-900 max-w-full mx-auto"}>
+        <h2 className={" text-center text-xs lg:text-sm font-light text-gray-400 ml-[4px] py-2 px-3 border-gray-900 max-w-full mx-auto hidden md:block"}>
         Designed specially for improving foundational 
         outcomes in JAYASHANKAR BHUPALPALLY DISTRICT          
         </h2>

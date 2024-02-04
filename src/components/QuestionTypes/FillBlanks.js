@@ -32,12 +32,12 @@ export default function FillBlanks(props) {
     return (
     <div className="container px-10" >
         <div className={styles.qno}>Ques no:</div>
-        <h1 className={styles.head2}>{question.question}</h1>
+        <h1 className={styles.head2 + " text-normal lg:text-xl"}>{question.question}</h1>
         <form onSubmit={handleSubmit}>
         {question.options.map((option, index) => (
-            <div key={index} className="grid grid-cols-4 gap-4 py-4">
-                <div className=' col-span-3 border text-center border-gray-300 rounded-md p-2 w-full bg-white'>{option}</div>
-                <input onChange={(e)=>{handleChange(e, index)}} value={answers[index]} type="text" className="border border-gray-300 rounded-md p-2 w-full" />
+            <div key={index} className="grid grid-cols-4 gap-1 lg:gap-2 py-1 lg:py-2">
+                <div className=' col-span-3 border text-center border-gray-300 rounded-md p-1 w-full bg-white'>{option}</div>
+                <input onChange={(e)=>{handleChange(e, index)}} value={answers[index]} type="text" className="border border-gray-300 rounded-md p-1 w-full" />
                 </div>
                 ))}
                 <div className='flex flex-row justify-center'>
