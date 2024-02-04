@@ -64,7 +64,7 @@ function page() {
     <div className="container py-6 px-10">
       <h1 className="text-4xl text-center">Results</h1>
       {/* <h1 className="text-2xl py-7">Here's a summary of the quiz you attempted </h1> */}
-      <div className="flex flex-row gap-10 justify-center py-10">
+      <div className="flex flex-row gap-4 justify-center py-10">
         <Card heading="9" description="Total Questions" />
         <Card heading={attempted} description="Attempted" />
         <Card heading={correct} description="Correct" />
