@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Home() {
     return (
         <div className="px-12">
-            <div className="relative container mx-auto pt-[200px]">
+            <div className="relative container mx-auto pt-[75px]">
                 <img className=" absolute top-0 pointer-events-none hidden lg:block" src="./HeroImg.svg" />
-                <div className=" w-1/2">
+                <div className=" w-full lg:w-1/2">
                     <h2 className={" text-xl font-normal text-gray-400 border-l-[1px] ml-[4px] px-3 mb-[60px] border-gray-900 "}>
                         At QuizTaker, we believe that learning should be an exciting adventure for kids! Our platform is designed to make education engaging, interactive, and, most importantly, fun for children of all ages. Whether they are exploring new concepts, reinforcing classroom learning, or just having a good time, our website offers a wide range of educational activities.
                     </h2>
