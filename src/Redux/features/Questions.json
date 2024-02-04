@@ -38,16 +38,16 @@
       "question": "Match the following",
       "options": {
         "left": [
-          "a",
-          "b",
-          "c",
-          "d"
+          ["A", ". ", "Oldest IIT"],
+          ["B",". ", "Capital of India"],
+          ["C",". ", "Capital of USA"],
+          ["D",". ", "Currency of India"]
         ],
         "right": [
-          "1",
-          "2",
-          "3",
-          "4"
+          ["1",". ", "Washington DC"],
+          ["2",". ", "Rupees"],
+          ["3",". ", "IIT Kharagpur"],
+          ["4",". ", "New Delhi"]
         ]
       }
     },
@@ -57,18 +57,16 @@
       "question": "Match the following",
       "options": {
         "left": [
-          "Lion",
-          "Hen",
-          "Dog",
-          "Horse",
-          "Camel"
+          ["A",". ", "Lion"],
+          ["b",". ", "Bird"],
+          ["c",". ", "Fish"],
+          ["d",". ", "Horse"]
         ],
         "right": [
-          "Farm",
-          "Den",
-          "Stable",
-          "Kennel",
-          "Desert"
+          ["1",". ", "Water"],
+          ["2",". ", "Den"],
+          ["3",". ", "Stable"],
+          ["4",". ", "Tree"]
         ]
       }
     },
@@ -78,16 +76,16 @@
       "question": "Match the following",
       "options": {
         "left": [
-          "a",
-          "b",
-          "c",
-          "d"
+          ["A", ". ", "Mango"],
+          ["B",". ", "Potato"],
+          ["C",". ", "Ice Cream"],
+          ["D",". ", "French Fries"]
         ],
         "right": [
-          "1",
-          "2",
-          "3",
-          "4"
+          ["1",". ", "Vegetable"],
+          ["2",". ", "Starter"],
+          ["3",". ", "Fruit"],
+          ["4",". ", "Desert"]
         ]
       }
     },
