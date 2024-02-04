@@ -62,3 +62,55 @@
   cursor: pointer;
   text-decoration: none;
 }
+@media screen and (max-width: 464px) {
+  .col1 {
+    width: 100%;
+    padding: 2% 1% 10% 1%;
+  }
+  .col2 {
+    width: 100%;
+  }
+  .card {
+    background-color: white;
+    border-radius: 25px;
+    margin: 5% 2% 4% 2%;
+    padding: 6% 2% 5% 2%;
+  }
+
+  .head1 {
+    font-size: 4.5vw;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 6% 0;
+  }
+  .input {
+    font-size: 3.5vw;
+    color: #7c838a;
+    margin: 2% 0 0 0;
+  }
+  .inpEmail {
+    background-color: #d8e4eede;
+    color: #7c838a;
+    width: 95%;
+    border: none;
+    font-size: 3.5vw;
+    padding: 12px 6px 12px 12px;
+    margin: 10px 2px 25px 0px;
+    border-radius: 10px;
+  }
+  .loginBtn {
+    background-color: #f9ed32;
+    font-size: 3.5vw;
+    border-radius: 12px;
+    border: none;
+    padding: 12px 6rem 11px 6rem;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .txt {
+    font-size: 3vw;
+    color: #7c838a;
+    text-align: center;
+  }
+}
