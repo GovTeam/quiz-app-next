@@ -5,6 +5,7 @@
 .cont2 {
   padding: 3rem 1rem 1rem 1rem;
   width: 80%;
+  height: auto;
 }
 .head1 {
   font-size: 22px;
@@ -78,10 +79,6 @@
   padding: 0 0 0 30%;
 }
 @media screen and (max-width: 464px) {
-  .cont2 {
-    padding: 3rem 1rem 1rem 1rem;
-    width: 100%;
-  }
   .match1 {
     display: flex;
     padding: 0% 0% 5% 1%;
@@ -98,5 +95,10 @@
     width: 50%;
     margin: 0 0 1rem 0;
     padding: 0 0 0 2%;
+  }
+  .cont2 {
+    padding: 3rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 110vh;
   }
 }
