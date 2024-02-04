@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector, useAppStore } from "@/Redux/hooks";
 import {setQuestion} from "@/Redux/features/currSlice";  
 import Sidepane from "@/components/CorrectSP/Sidepane";
@@ -12,9 +13,17 @@ import FillBlanks from "@/components/CQue/FillBlanks";
 
 function page({params}) {
   const store = useAppStore()
+  const { push } = useRouter();
   const dispatch = useAppDispatch();
+  const status = useAppSelector((state) => state.status.currentStatus);
   useEffect(() => {
+      if(status !== "COMPLETED"){
+          if(status === "NOT_STARTED")
+          push("/questions")
+      else
+          push('/questions/0');
     dispatch(setQuestion(params.id));
+    }
   }, [])
     const allQuestions = useAppSelector(state => state.questions.allQuestions);
     const answer_key = useAppSelector((state) => state.answers.answerKey);
