@@ -10,9 +10,7 @@ import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   const [verified, setVerified] = useState(false);
-
   const router = useRouter();
 
   const handleLogout = () => {
