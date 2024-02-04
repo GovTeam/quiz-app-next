@@ -102,7 +102,7 @@
   font-size: 19px;
   margin: 0 0 1.5rem 0;
 }
-@media screen and (max-width: 464px) {
+@media screen and (max-width: 600px) {
   .match1 {
     display: flex;
     padding: 0% 0% 0% 1%;
