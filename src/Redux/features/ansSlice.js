@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux';
 import initialQuestions from './Questions.json'
 
 let initialAns = Array(initialQuestions.length).fill({

@@ -3,10 +3,12 @@ import { useAppDispatch, useAppSelector, useAppStore } from "@/Redux/hooks";
 import styles from "./page.module.css";
 import Card from "@/components/Card/Card";
 import Link from "next/link";
+import { startTest } from "@/Redux/features/statusSlice";
 
 
 function page() {
   let types = "match";
+  const dispatch = useAppDispatch();
 
   return (
     <div className="container py-6 px-10">
@@ -16,7 +18,7 @@ function page() {
       <Card heading="15" description="Minutes" />
       </div>
       <div className="flex flex-row justify-center">
-      <Link href="/questions/0">
+      <Link onClick={()=>{dispatch(startTest())}} href="/questions/0">
        <button className={styles.saveBtn}> Start Quiz </button>
        </Link>
       </div>
