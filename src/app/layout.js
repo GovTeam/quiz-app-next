@@ -19,11 +19,18 @@ export default function RootLayout({ children }) {
   const [verified, setVerified] = useState(false);
 
   const router = useRouter();
-
   useEffect(() => {
     const verifyToken = () => {
       try {
-        axios.get("/api/auth/verify-token");
+        axios.get("/api/auth/verify-token", {
+          validateStatus: function (status) {
+            return status <= 300; // Reject only if the status code is greater than 300
+          }
+        }).then((res) => {
+          console.log(res.data);
+        }).catch((err)=>{
+          console.log("Could not verify token");
+        });
         setVerified(true);
       } catch (error) {
         setVerified(false);
