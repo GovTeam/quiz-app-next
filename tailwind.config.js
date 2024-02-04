@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       colors:{
         primary:'#FCC822',
+      },
+      fontFamily: {
+        custom: ['CustomFont', 'sans'],
       }
     },
   },
