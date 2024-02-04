@@ -23,7 +23,7 @@ const Navbar = () => {
       </Link>
       <div className={styles.menu}>
         <Link className={styles.link} href="/about">
-          How is works
+          How it works
         </Link>
         <Link href="/signup">
             <button  className={styles.link3}>Sign Up</button>
