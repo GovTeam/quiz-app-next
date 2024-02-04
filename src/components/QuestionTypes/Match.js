@@ -13,7 +13,7 @@ function Match(props) {
           <div className={styles.matchCol1}>
             {question.options.left.map((option, index) => {
               return (
-                <div className={styles.inpCol}>
+                <div key={index} className={styles.inpCol}>
                   <p key={index} className={styles.col2t}>
                     {option}
                   </p>
