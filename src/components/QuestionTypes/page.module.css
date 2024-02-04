@@ -50,7 +50,7 @@
 }
 .match1 {
   display: flex;
-  padding: 0% 10% 5% 10%;
+  padding: 0% 10% 0% 10%;
 }
 .matchCol1 {
   width: 50%;
@@ -67,14 +67,14 @@
   margin: 0 0 1rem 0;
 }
 .col2t {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   text-align: left;
   margin: 0 0 1rem 0;
   width: 50%;
 }
 .col3t {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   text-align: left;
   margin: 0 0 1rem 0;
