@@ -6,7 +6,7 @@ export default function Home() {
   console.log(styles);
   return (
     <div className="px-12">
-      <div className="relative container mx-auto pt-[100px]">
+      <div className="relative container mx-auto pt-[50px] lg:pt-[100px]">
         <img className="absolute top-0 pointer-events-none hidden lg:block" src="./HeroImg.svg"/>
         <div>
           <h1 className="text-5xl font-semibold text-gray-800">
