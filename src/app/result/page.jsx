@@ -8,11 +8,11 @@ import { useAppSelector, useAppDispatch } from "@/Redux/hooks";
 
 function page() {
   const matchArrays = (arr1, arr2) => {
-    if (arr1.length !== arr2.length) {
+    if (arr1.length != arr2.length) {
       return false;
     }
     for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
+      if (arr1[i] != arr2[i]) {
         return false;
       }
     }
@@ -32,6 +32,9 @@ function page() {
       if(questions[i].type == "select"){
         if(answers[i].value == answerKey[i].answer) correct++;
       } else{
+        console.log("Mathing arrays");
+        console.log("arr1 = ", answers[i].value);
+        console.log("arr2 = ", answerKey[i].answer);
         if(matchArrays(answers[i].value, answerKey[i].answer)) correct++;
       }
     }
