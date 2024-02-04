@@ -77,3 +77,26 @@
   margin: 0 0 1rem 0;
   padding: 0 0 0 30%;
 }
+@media screen and (max-width: 464px) {
+  .cont2 {
+    padding: 3rem 1rem 1rem 1rem;
+    width: 100%;
+  }
+  .match1 {
+    display: flex;
+    padding: 0% 0% 5% 1%;
+  }
+  .matchCol1 {
+    width: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 1rem 0;
+    padding: 0 0 0 2%;
+  }
+  .matchCol2 {
+    width: 50%;
+    margin: 0 0 1rem 0;
+    padding: 0 0 0 2%;
+  }
+}
