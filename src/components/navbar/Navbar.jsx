@@ -22,7 +22,7 @@ const Navbar = () => {
         />
       </Link>
       <div className={styles.menu}>
-        <Link className={styles.link} href="/#about">
+        <Link className={styles.link} href="/about">
           How is works
         </Link>
         <Link href="/signup">
