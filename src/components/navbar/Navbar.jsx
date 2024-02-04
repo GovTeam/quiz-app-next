@@ -130,25 +130,12 @@ const Navbar = () => {
         />
       </Link>
       <div className={styles.menu}>
-<<<<<<< HEAD
-        <Link className={styles.link} href="/about">
-          How it works
-        </Link>
-        <Link href="/signup">
-            <button  className={styles.link3}>Sign Up</button>
-          
-        </Link>
-        <Link  href="/login">
-          <button className={styles.link2}>Login</button>
-        </Link>
-=======
         {/* <Link className={styles.link} href="/about">
           How is works
         </Link> */}
         <button onClick={handleLogout} className={styles.link3}>
           Signout
         </button>
->>>>>>> efc470c2a86aa7a8682bcead7089509bfeb63312
       </div>
       <Image
         className={styles.hamburger}

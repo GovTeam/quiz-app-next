@@ -4,10 +4,10 @@
       "type": "select",
       "question": "Select the smallest number from the following",
       "options": [
-        "12",
-        "23",
-        "13",
-        "24"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -26,10 +26,10 @@
       "type": "select",
       "question": "Select the smallest number from the following",
       "options": [
-        "103",
-        "230",
-        "31",
-        "4321"
+        "1",
+        "2",
+        "3",
+        "4"
       ]
     },
     {
@@ -92,7 +92,7 @@
     {
       "order": "6",
       "type": "fill",
-      "question": "Solve the following",
+      "question": "Fill in the blanks",
       "options": [
         "12 + 24",
         "24 - 12",
@@ -103,23 +103,23 @@
     {
       "order": "7",
       "type": "fill",
-      "question": "Answer the following",
+      "question": "Fill in the blanks",
       "options": [
-        "Number of hours in a day",
-        "Number of days in a leap year",
-        "Number of planets in our solar system",
-        "Number of weeks in a year"
+        "12 + 24",
+        "24 - 12",
+        "12 * 24",
+        "24 / 12"
       ]
     },
     {
       "order": "8",
       "type": "fill",
-      "question": "Write following number names in numerical form",
+      "question": "Fill in the blanks",
       "options": [
-        "one hundred and twenty two",
-        "Two thousand and four",
-        "Eighty eight",
-        "Two hundred and fifty six"
+        "12 + 24",
+        "24 - 12",
+        "12 * 24",
+        "24 / 12"
       ]
     }
   ]
