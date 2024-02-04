@@ -4,10 +4,12 @@ import trophy from "@assets/Results/gymklogo.png";
 import Image from "next/image";
 import Card from "@/components/Card/Card";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 import { useAppSelector, useAppDispatch } from "@/Redux/hooks";
 import Link from 'next/link';
 
 function page() {
+  const { push } = useRouter();
   const matchArrays = (arr1, arr2) => {
     if (arr1.length != arr2.length) {
       return false;
@@ -44,6 +46,10 @@ function page() {
     return { attempted, correct };
   };
   useEffect(() => {
+    if(status === "NOT_STARTED")
+    push("/questions")
+    else if(status === "ONGOING")
+    push("/questions/0")
     console.log("useEffect");
     console.log("questions", questions);
     console.log("answers", answers);
