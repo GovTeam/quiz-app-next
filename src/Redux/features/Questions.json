@@ -1,125 +1,125 @@
 [
-    {
-      "order": "0",
-      "type": "select",
-      "question": "Select the smallest number from the following",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
-    },
-    {
-      "order": "1",
-      "type": "select",
-      "question": "Select the smallest number from the following",
-      "options": [
-        "20",
-        "10",
-        "50",
-        "100"
-      ]
-    },
-    {
-      "order": "2",
-      "type": "select",
-      "question": "Select the smallest number from the following",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
-    },
-    {
-      "order": "3",
-      "type": "match",
-      "question": "Match the following",
-      "options": {
-        "left": [
-          ["A", ". ", "Oldest IIT"],
-          ["B",". ", "Capital of India"],
-          ["C",". ", "Capital of USA"],
-          ["D",". ", "Currency of India"]
-        ],
-        "right": [
-          ["1",". ", "Washington DC"],
-          ["2",". ", "Rupees"],
-          ["3",". ", "IIT Kharagpur"],
-          ["4",". ", "New Delhi"]
-        ]
-      }
-    },
-    {
-      "order": "4",
-      "type": "match",
-      "question": "Match the following",
-      "options": {
-        "left": [
-          ["A",". ", "Lion"],
-          ["b",". ", "Bird"],
-          ["c",". ", "Fish"],
-          ["d",". ", "Horse"]
-        ],
-        "right": [
-          ["1",". ", "Water"],
-          ["2",". ", "Den"],
-          ["3",". ", "Stable"],
-          ["4",". ", "Tree"]
-        ]
-      }
-    },
-    {
-      "order": "5",
-      "type": "match",
-      "question": "Match the following",
-      "options": {
-        "left": [
-          ["A", ". ", "Mango"],
-          ["B",". ", "Potato"],
-          ["C",". ", "Ice Cream"],
-          ["D",". ", "French Fries"]
-        ],
-        "right": [
-          ["1",". ", "Vegetable"],
-          ["2",". ", "Starter"],
-          ["3",". ", "Fruit"],
-          ["4",". ", "Desert"]
-        ]
-      }
-    },
-    {
-      "order": "6",
-      "type": "fill",
-      "question": "Fill in the blanks",
-      "options": [
-        "12 + 24",
-        "24 - 12",
-        "12 * 24",
-        "24 / 12"
-      ]
-    },
-    {
-      "order": "7",
-      "type": "fill",
-      "question": "Fill in the blanks",
-      "options": [
-        "12 + 24",
-        "24 - 12",
-        "12 * 24",
-        "24 / 12"
-      ]
-    },
-    {
-      "order": "8",
-      "type": "fill",
-      "question": "Fill in the blanks",
-      "options": [
-        "12 + 24",
-        "24 - 12",
-        "12 * 24",
-        "24 / 12"
+  {
+    "order": "0",
+    "type": "select",
+    "question": "Select the smallest number from the following",
+    "options": [
+      "12",
+      "23",
+      "13",
+      "24"
+    ]
+  },
+  {
+    "order": "1",
+    "type": "select",
+    "question": "Select the smallest number from the following",
+    "options": [
+      "20",
+      "10",
+      "50",
+      "100"
+    ]
+  },
+  {
+    "order": "2",
+    "type": "select",
+    "question": "Select the smallest number from the following",
+    "options": [
+      "103",
+      "230",
+      "31",
+      "4321"
+    ]
+  },
+  {
+    "order": "3",
+    "type": "match",
+    "question": "Match the following",
+    "options": {
+      "left": [
+        ["A", ". ", "Oldest IIT"],
+        ["B",". ", "Capital of India"],
+        ["C",". ", "Capital of USA"],
+        ["D",". ", "Currency of India"]
+      ],
+      "right": [
+        ["1",". ", "Washington DC"],
+        ["2",". ", "Rupees"],
+        ["3",". ", "IIT Kharagpur"],
+        ["4",". ", "New Delhi"]
       ]
     }
-  ]
+  },
+  {
+    "order": "4",
+    "type": "match",
+    "question": "Match the following",
+    "options": {
+      "left": [
+        ["A",". ", "Lion"],
+        ["b",". ", "Bird"],
+        ["c",". ", "Fish"],
+        ["d",". ", "Horse"]
+      ],
+      "right": [
+        ["1",". ", "Water"],
+        ["2",". ", "Den"],
+        ["3",". ", "Stable"],
+        ["4",". ", "Tree"]
+      ]
+    }
+  },
+  {
+    "order": "5",
+    "type": "match",
+    "question": "Match the following",
+    "options": {
+      "left": [
+        ["A", ". ", "Mango"],
+        ["B",". ", "Potato"],
+        ["C",". ", "Ice Cream"],
+        ["D",". ", "French Fries"]
+      ],
+      "right": [
+        ["1",". ", "Vegetable"],
+        ["2",". ", "Starter"],
+        ["3",". ", "Fruit"],
+        ["4",". ", "Desert"]
+      ]
+    }
+  },
+  {
+    "order": "6",
+    "type": "fill",
+    "question": "Solve the following",
+    "options": [
+      "12 + 24",
+      "24 - 12",
+      "12 * 24",
+      "24 / 12"
+    ]
+  },
+  {
+    "order": "7",
+    "type": "fill",
+    "question": "Answer the following",
+    "options": [
+      "Number of hours in a day",
+      "Number of days in a leap year",
+      "Number of planets in our solar system",
+      "Number of weeks in a year"
+    ]
+  },
+  {
+    "order": "8",
+    "type": "fill",
+    "question": "Write following number names in numerical form",
+    "options": [
+      "one hundred and twenty two",
+      "Two thousand and four",
+      "Eighty eight",
+      "Two hundred and fifty six"
+    ]
+  }
+]
