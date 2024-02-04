@@ -5,6 +5,8 @@ import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
 
 function Select(props){
     const {question} = props;
+    let qn=question.order;
+    qn++;
     const answers = useAppSelector(state => state.answers.answers);
     const [selected, setSelected] = useState('');
     const dispatch = useAppDispatch();
@@ -20,7 +22,7 @@ function Select(props){
 
     return(        
     <div>
-        <div className={styles.qno}>Ques no:</div>
+        <div className={styles.qno}>Ques no:{qn}</div>
         <div className={styles.head2}>
           {question.question}
         </div>

@@ -5,6 +5,8 @@ import { setAnswer } from '@/Redux/features/ansSlice';
 
 function Match(props) {
   const { question } = props;
+  let qn=question.order;
+  qn++;
   const dispatch  = useAppDispatch();
   const all_ans = useAppSelector((state) => state.answers.answers);
   const [answers, setAnswers] = useState(Array(question.options.length).fill(''));
@@ -32,7 +34,7 @@ function Match(props) {
   return (
     <div>
       <center>
-        <div className={styles.qno}>Ques no:</div>
+        <div className={styles.qno}>Ques no:{qn}</div>
         <div className={styles.head2}>{question.question}</div>
         <div className={styles.instru} >Please enter the correct option in the blank provided.</div>
         <form onSubmit={handleSubmit}>

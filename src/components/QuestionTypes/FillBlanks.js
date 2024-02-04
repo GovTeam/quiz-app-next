@@ -5,6 +5,9 @@ import { setAnswer } from '@/Redux/features/ansSlice';
 
 export default function FillBlanks(props) {
   const { question } = props;
+  let qn=question.order;
+  qn++;
+//   console.log(qn);
   const dispatch  = useAppDispatch();
   const all_ans = useAppSelector((state) => state.answers.answers);
   const [answers, setAnswers] = useState(Array(question.options.length).fill(''));
@@ -31,7 +34,7 @@ export default function FillBlanks(props) {
     }
     return (
     <div className="container px-10" >
-        <div className={styles.qno}>Ques no:</div>
+        <div className={styles.qno}>Ques no:{qn}</div>
         <h1 className={styles.head2 + " text-normal lg:text-xl"}>{question.question}</h1>
         <form onSubmit={handleSubmit}>
         {question.options.map((option, index) => (
