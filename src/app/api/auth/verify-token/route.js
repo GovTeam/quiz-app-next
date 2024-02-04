@@ -7,7 +7,7 @@ export function GET(request) {
     if (!token) {
         return NextResponse.json({
             error: "No access token!"
-        }, { status: 300 });
+        }, { status: 401 });
     }
 
     try {

@@ -7,13 +7,14 @@ import hamburger from "./../../../public/assets/hamburger.png";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
+import { login, logout } from "@/Redux/features/authSlice";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
   const [verified, setVerified] = useState(false);
-
   const router = useRouter();
+  const dispatch = useAppDispatch();
 
   const handleLogout = () => {
     try {
@@ -22,6 +23,7 @@ const Navbar = () => {
         console.log("response received",res.data);
       });
       setVerified(false);
+      dispatch(logout());
       router.push("/login");
       alert("You were logged out!");
     } catch (err) {
@@ -29,24 +31,35 @@ const Navbar = () => {
       alert("Unable to logout, try after a minute.");
     }
   };
-
+  const auth = useAppSelector((state) => state.auth.authenticated);
   useEffect(() => {
+
     const verifyToken = () => {
       try {
-        axios.get("/api/auth/verify-token")
+        axios.get("/api/auth/verify-token", {
+          validateStatus: function (status) {
+            return status <= 300; // Reject only if the status code is greater than 300
+          }
+        })
         .then((res)=>{
           console.log("response received",res.data);
           setVerified(true);
+          dispatch(login())
         }).catch((err)=>{
-          console.log("error",err);
+          console.log("Could not verify token");
+          dispatch(logout());
         });
       } catch (error) {
         setVerified(false);
+        dispatch(logout());
         router.push("/login");
       }
     };
+    if(auth == true){
+      setVerified(true);
+    }else
     verifyToken();
-  }, []);
+  }, [auth]);
 
   console.log(verified);
 

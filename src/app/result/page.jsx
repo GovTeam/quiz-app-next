@@ -5,7 +5,7 @@ import Image from "next/image";
 import Card from "@/components/Card/Card";
 import styles from "./page.module.css";
 import { useAppSelector, useAppDispatch } from "@/Redux/hooks";
-import Link from "next/link";
+import Link from 'next/link';
 
 function page() {
   const matchArrays = (arr1, arr2) => {
@@ -63,13 +63,7 @@ function page() {
         <Card heading={attempted} description="Attempted" />
         <Card heading={correct} description="Correct" />
       </div>
-      {/* <div className='flex flex-row justify-center py-7'> <button className={styles.saveBtn}> View correct answers </button> </div> */}
-      <div className="flex flex-row justify-center py-7">
-        {" "}
-        <Link href="/">
-          1<button className={styles.saveBtn}> Go to home page </button>{" "}
-        </Link>
-      </div>
+      <div className='flex flex-row justify-center py-7'> <button className={styles.saveBtn}> View correct answers </button> </div>
     </div>
   );
 }

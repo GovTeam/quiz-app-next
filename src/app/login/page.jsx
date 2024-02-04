@@ -1,17 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import balloon from "./../../../public/assets/balloon.png";
 import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
+import { login, logout } from "@/Redux/features/authSlice";
+import { set } from "mongoose";
 
 function page() {
   const router = useRouter();
-
+  const dispatch = useAppDispatch();  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [auth, setAuth] = useState(useAppSelector((state) => state.auth.authenticated));
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -29,13 +33,35 @@ function page() {
         email,
         password,
       });
+      let data = response.data;
+      if(data.success){
+        dispatch(login());
+      }
       router.push("/");
     } catch (error) {
+      dispatch(logout());
       alert("login failed");
-      console.error("Login failed", error.response.data);
+      console.error("Login failed", error);
     }
   };
-
+  useEffect(() => {
+    const verifyToken = () => {
+      try {
+        axios.get("/api/auth/verify-token")
+        .then((res)=>{
+          console.log("response received",res.data);
+          router.push("/");
+          dispatch(login())
+        }).catch((err)=>{
+          console.log("Could not verify token");
+          dispatch(logout());
+        });
+      } catch (err) {
+        dispatch(logout());
+      }
+    };
+    verifyToken();
+  }, []);
   return (
     <div className={styles.container}>
       <div className={styles.col1}>
