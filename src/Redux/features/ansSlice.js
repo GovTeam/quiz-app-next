@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import initialQuestions from './Questions.json'
+import initialQuestions from './Questions.json';
+import answerKey from './AnswerKey.json';
 
 let initialAns = Array(initialQuestions.length).fill({
     answered: false,
@@ -10,6 +11,7 @@ export const ansSlice = createSlice({
     name: 'answers',
     initialState: {
         answers: initialAns,
+        answerKey: answerKey
     },
     reducers: {
       setAnswer: (state, action) => {
