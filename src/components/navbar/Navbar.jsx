@@ -66,7 +66,7 @@ const Navbar = () => {
   if (!verified) {
     return (
       <div className={styles.container}>
-        <Link href={"/"}>
+        <Link className=" p-4" href={"/"}>
           <Image
             src={logo}
             className={styles.img}
@@ -76,15 +76,19 @@ const Navbar = () => {
             alt="Logo"
           />
         </Link>
+        <h2 className={" text-center text-xs lg:text-sm font-light text-gray-400 ml-[4px] py-2 px-3 border-gray-900 max-w-full mx-auto"}>
+        Designed specially for improving foundational 
+        outcomes in JAYASHANKAR BHUPALPALLY DISTRICT          
+        </h2>
         <div className={styles.menu}>
           {/* <Link className={styles.link} href="/about">
           How is works
         </Link> */}
           <Link href="/signup">
-            <button className={styles.link3}>Sign Up</button>
+            <button className={styles.link3 + " py-4"}>Sign Up</button>
           </Link>
           <Link href="/login">
-            <button className={styles.link2}>Login</button>
+            <button className={styles.link2 + " p-4"}>Login</button>
           </Link>
         </div>
         <Image

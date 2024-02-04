@@ -14,8 +14,9 @@ export default function Home() {
             new concepts <br/>
             for each question
           </h1>
-          <h2 className={" mt-16 text-xl font-normal text-gray-400 border-l-[1px] ml-[4px] py-2 px-3 border-gray-900 "}>
-            We help you prepare for exams and quizes 
+          <h2 className={" mt-16 text-xl font-normal text-gray-400 border-l-[1px] ml-[4px] py-2 px-3 border-gray-900 w-full lg:w-1/2"}>
+            We help you prepare for exams and quizes <br/>
+            <p className="text-sm text-gray-800 text-wrap">Developed under the guidance of Shri Bhavesh Mishra IAS & Shri Uma Shankar Prasad IAS</p>
           </h2>
           <div className="mt-16 flex items-center gap-8">
             <a href="/questions" className=" bg-primary shadow-xl shadow-primary/50 text-white font-semibold p-4 ">

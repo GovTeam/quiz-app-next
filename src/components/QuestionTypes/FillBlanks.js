@@ -35,8 +35,8 @@ export default function FillBlanks(props) {
         <h1 className={styles.head2}>{question.question}</h1>
         <form onSubmit={handleSubmit}>
         {question.options.map((option, index) => (
-            <div key={index} className="grid grid-cols-2 gap-4 py-4">
-                <div className='border text-center border-gray-300 rounded-md p-2 w-full bg-white'>{option}</div>
+            <div key={index} className="grid grid-cols-4 gap-4 py-4">
+                <div className=' col-span-3 border text-center border-gray-300 rounded-md p-2 w-full bg-white'>{option}</div>
                 <input onChange={(e)=>{handleChange(e, index)}} value={answers[index]} type="text" className="border border-gray-300 rounded-md p-2 w-full" />
                 </div>
                 ))}
