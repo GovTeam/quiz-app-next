@@ -9,6 +9,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
 import { login, logout } from "@/Redux/features/authSlice";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -25,7 +26,16 @@ const Navbar = () => {
       setVerified(false);
       dispatch(logout());
       router.push("/login");
-      alert("You were logged out!");
+      toast.success('Logout success!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } catch (err) {
       console.log("Some error occured!");
       alert("Unable to logout, try after a minute.");
@@ -123,40 +133,45 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      <Link href={"/"}>
-        <Image
-          src={logo}
-          className={styles.img}
-          width={150}
-          style={{ height: "auto" }}
-          placeholder="blur"
-          alt="Logo"
-        />
-      </Link>
-      <div className={styles.menu}>
-        {/* <Link className={styles.link} href="/about">
+        <Link className=" p-4" href={"/"}>
+          <Image
+            src={logo}
+            className={styles.img}
+            width={150}
+            style={{ height: "auto" }}
+            placeholder="blur"
+            alt="Logo"
+          />
+        </Link>
+        <h2 className={" text-center text-xs lg:text-sm font-light text-gray-400 ml-[4px] py-2 px-3 border-gray-900 max-w-full mx-auto hidden md:block"}>
+        Designed specially for improving foundational 
+        outcomes in JAYASHANKAR BHUPALPALLY DISTRICT          
+        </h2>
+        <div className={styles.menu}>
+          {/* <Link className={styles.link} href="/about">
           How is works
         </Link> */}
-        <button onClick={handleLogout} className={styles.link3}>
-          Signout
-        </button>
-      </div>
-      <Image
-        className={styles.hamburger}
-        src={hamburger}
-        width={20}
-        style={{ height: "auto" }}
-        alt="Hamburger"
-        onClick={() => setOpen(!open)}
-      />
-      {open && (
-        <div className={styles.menu2}>
-          <button className={styles.link} onClick={handleLogout}>
-            Sign Out
-          </button>
+            <button onClick={handleLogout} className={styles.link3 + " py-4"}>Logout</button>
         </div>
-      )}
-    </div>
+        <Image
+          className={styles.hamburger}
+          src={hamburger}
+          width={20}
+          style={{ height: "auto" }}
+          alt="Hamburger"
+          onClick={() => setOpen(!open)}
+        />
+        {open && (
+          <div className={styles.menu2}>
+            <button
+              className={styles.link}
+              onClick={() => {handleLogout(); setOpen(!open)}}
+            >
+              Log out
+            </button>
+          </div>
+        )}
+      </div>
   );
 };
 
